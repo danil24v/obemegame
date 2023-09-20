@@ -1,1 +1,17 @@
-echo "Test"
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Canvas Resize</title>
+    <link rel="stylesheet" href="res/main.css">
+</head>
+<body onresize="resize_canvas()">
+  <canvas id="canvas" style="background-color: black"></canvas>
+</body>
+<div style="display:none;">
+  <img id="img_bg0" src="res/bahmut.jpg" />
+</div>
+<script src="scripts/object.js"></script>
+<script src="scripts/player.js"></script>
+<script src="scripts/obstacle.js"></script>
+<script src="scripts/game.js"></script>
+</html>
