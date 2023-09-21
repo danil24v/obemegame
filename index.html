@@ -1,29 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+  
 <head>
-    <title>Canvas Resize</title>
-    <link rel="stylesheet" href="res/main.css">
+    <title>Obema: The Game</title>
+    <script src="https://cdn.jsdelivr.net/npm/phaser@3.55.0/dist/phaser.js"></script>
 </head>
-<body onresize="resize_canvas()">
-  <canvas id="canvas" style="background-color: black"></canvas>
+<body style="background-color: black;">
+
 </body>
-<div style="display:none;">
-  <img id="img_bg0" src="res/bahmut.jpg" />
-  <img id="img_bg1" src="res/dnepr.jpg" />
-  <img id="img_over" src="res/over.png" />
-  <img id="img_win" src="res/win.jpg" />
-  <img id="img_player" src="res/player.png" />
-  <img id="img_road" src="res/road.png" />
-  <img id="img_lancet" src="res/lancet.png" />
-  <img id="img_tmka" src="res/tmka.png" />
-  <audio id="sfx_jump" controls src="res/sfx_jump.wav"  />
-  <audio id="sfx_hit" controls src="res/sfx_hit.wav" />
-  <audio id="sfx_lose" controls src="res/sfx_lose.wav" />
-  <audio id="sfx_win" controls src="res/sfx_win.wav" />
-  <audio id="sfx_music" controls src="res/music.mp3" />
-</div>
-<script src="scripts/object.js"></script>
-<script src="scripts/player.js"></script>
-<script src="scripts/fly.js"></script>
-<script src="scripts/game.js"></script>
+<script src="scripts/custom.js"></script>
+<script src="scripts/main.js"></script>
 </html>
