@@ -9,14 +9,16 @@ class Player extends Object{
     }
 
     timerJump(pInst){
+        let velUp = -35
+        let velDown = 8
         let sprSize = 0
         if(pInst.sprSize != null) sprSize = pInst.sprSize
-        let jumpHeight = pInst.groundPosY-sprSize*1.2
+        let jumpHeight = pInst.groundPosY-sprSize*1.4
 
-        let dir = -1 //up
-        if(pInst.jumpState == 'down')
-            dir = 1
-        pInst.move({x: 0, y: 20 * dir})
+        if(pInst.jumpState == 'up')
+            pInst.move({x: 0, y: velUp})
+        else
+            pInst.move({x: 0, y: velDown})
 
         if(pInst.jumpState == 'up' & pInst.getPos().y < jumpHeight){
             pInst.jumpState = 'down'
