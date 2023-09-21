@@ -82,6 +82,8 @@ function gameOver(){
     clearInterval(roadTimer)
     clearInterval(spawnerTimer)
     console.log('Game over')
+    sfxLose.pause()
+    sfxLose.currentTime = 0
     sfxLose.play()
 }
 
@@ -90,6 +92,8 @@ function win(){
     clearInterval(spawnerTimer)
     gameState = 'win'
     console.log('Win')
+    sfxWin.pause()
+    sfxWin.currentTime = 0
     sfxWin.play()
 }
 
@@ -126,6 +130,8 @@ function handleClickEvent(canvas, event){
     let diffY = y- sprSizeP - pPos.y 
     if(Math.abs(diffX) < sprSizeP && Math.abs(diffY) < sprSizeP){
         player.jump()
+        sfxJump.pause()
+        sfxJump.currentTime = 0
         sfxJump.play()
     }
 
@@ -144,9 +150,6 @@ function handleClickEvent(canvas, event){
         }
     });
     if(delFly) flyes.shift()
-    sfxMusic.muted = false
-    sfxMusic.loop = true
-    //sfxMusic.play()
 }
 
 var wayKounter = 0;
