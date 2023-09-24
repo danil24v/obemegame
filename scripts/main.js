@@ -43,7 +43,7 @@ class Example extends Phaser.Scene
         this.chanceLancetSpawn = 6
         this.objMoveSpeed = 10
         this.explObject = null
-        this.kmDoDurki = 100
+        this.kmDoDurki = 50
         this.kmDoDurkiLeft = this.kmDoDurki
         this.durkaText = this.add.text(10, 10, 
             '', 
