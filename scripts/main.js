@@ -41,7 +41,7 @@ class Example extends Phaser.Scene
         this.spawnDelay = 2000
         this.chanceMineSpawn = 2
         this.chanceLancetSpawn = 6
-        this.objMoveSpeed = 12
+        this.objMoveSpeed = 10
         this.explObject = null
         this.kmDoDurki = 100
         this.kmDoDurkiLeft = this.kmDoDurki
@@ -77,8 +77,6 @@ class Example extends Phaser.Scene
 
         this.input.on('pointerdown', function (pointer)
         {
-            this.sound.unlock();
-
             var touchX = pointer.x;
             var touchY = pointer.y;
             console.log('touch', touchX, touchY)
@@ -241,9 +239,6 @@ class Example extends Phaser.Scene
 const config = {
     type: Phaser.AUTO,
     backgroundColor: 'rgb(255, 0, 00)',
-    audio: {
-		disableWebAudio: true
-	},
     scale: {
         mode: Phaser.Scale.FIT,
         parent: 'phaser-example',
